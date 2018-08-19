@@ -1,0 +1,41 @@
+Create a temporary directory on the instance.
+
+mkdir /tmp/ssm
+Change to the temporary directory.
+
+cd /tmp/ssm
+Use one of the following commands to download and run the SSM installer.
+
+64-bit instances:
+
+sudo yum install -y https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm
+32-bit instances:
+
+sudo yum install -y https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_386/amazon-ssm-agent.rpm
+Run the following command to determine if SSM Agent is running. The command should return the message "amazon-ssm-agent is running."
+
+Amazon Linux
+
+sudo status amazon-ssm-agent
+Amazon Linux 2
+
+sudo systemctl status amazon-ssm-agent
+Run the following commands if the previous command returns the message "amazon-ssm-agent is stopped."
+
+Start the service.
+
+Amazon Linux
+
+sudo start amazon-ssm-agent
+Amazon Linux 2
+
+sudo systemctl enable amazon-ssm-agent
+sudo systemctl start amazon-ssm-agent
+Check the status of the agent.
+
+Amazon Linux
+
+sudo status amazon-ssm-agent
+Amazon Linux 2
+
+sudo systemctl status amazon-ssm-agent
