@@ -1,0 +1,27 @@
+Installing Terraform
+Installing Terraform is a relatively trivial affair. Simply head over to Terraform select your operating system and download the corresponding zip file. Once downloaded extract the file to a convienient location on your computer and add to your path.
+
+Installing Terraform on Linux/Mac
+Here I download Terrraform to my Downloads folder, extracted the zip file, moved it to /home/terraform/Documents/terraform and then updated the PATH environment variable pointing it to Terraform.
+
+unzip terraform_0.9.11_linux_amd64.zip
+Archive:  terraform_0.9.11_linux_amd64.zip
+  inflating: terraform               
+mv terraform ../Documents/terraform/
+export PATH=$PATH:/home/terraform/Documents/terraform:$PATH
+Verify Terraform is installed and working correctly.
+
+terraform -version
+Terraform v0.9.11
+Success!
+
+Installing Terraform on Windows
+Here I created a folder called terraform in my C:\ then extracted the zip file. After that I updated the PATH environment variable pointing it to Terraform.
+
+cd \
+mkdir terraform
+I then used 7-zip to extract the terraform.exe to c:\terraform
+
+set PATH=%PATH%;C:\terraform
+C:\terraform>terraform.exe -version
+Terraform v0.9.11
